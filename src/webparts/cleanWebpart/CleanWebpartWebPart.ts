@@ -18,18 +18,13 @@ export interface ICleanWebpartWebPartProps {
 
 export default class CleanWebpartWebPart extends BaseClientSideWebPart<ICleanWebpartWebPartProps> {
 
-  private _isDarkTheme: boolean = false;
-  private _environmentMessage: string = '';
+ 
 
   public render(): void {
     const element: React.ReactElement<ICleanWebpartProps> = React.createElement(
       CleanWebpart,
       {
-        description: this.properties.description,
-        isDarkTheme: this._isDarkTheme,
-        environmentMessage: this._environmentMessage,
-        hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        
       }
     );
 
@@ -38,7 +33,7 @@ export default class CleanWebpartWebPart extends BaseClientSideWebPart<ICleanWeb
 
   protected onInit(): Promise<void> {
     return this._getEnvironmentMessage().then(message => {
-      this._environmentMessage = message;
+     
     });
   }
 
@@ -76,7 +71,7 @@ export default class CleanWebpartWebPart extends BaseClientSideWebPart<ICleanWeb
       return;
     }
 
-    this._isDarkTheme = !!currentTheme.isInverted;
+  
     const {
       semanticColors
     } = currentTheme;
