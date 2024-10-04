@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-article-series-client-side-solution",
+    "id": "deda2b72-4f93-4caf-862f-576e01267325",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "SPFX_ArticleSeries description"
+      },
+      "longDescription": {
+        "default": "SPFX_ArticleSeries description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-article-series Feature",
+        "description": "The feature that activates elements of the spfx-article-series solution.",
+        "id": "90a30a76-1fa6-4ef2-86a1-ba02df7aab46",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-article-series.sppkg"
+  }
+}
