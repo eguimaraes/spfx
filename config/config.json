@@ -17,11 +17,29 @@
           "manifest": "./src/webparts/cleanWebpart/CleanWebpartWebPart.manifest.json"
         }
       ]
+    },
+    "web-part-clean-html-basico-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/webPartCleanHtmlBasico/WebPartCleanHtmlBasicoWebPart.js",
+          "manifest": "./src/webparts/webPartCleanHtmlBasico/WebPartCleanHtmlBasicoWebPart.manifest.json"
+        }
+      ]
+    },
+    "article-1-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/article1/Article1WebPart.js",
+          "manifest": "./src/webparts/article1/Article1WebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "MyFirstSpFxWebPartWebPartStrings": "lib/webparts/myFirstSpFxWebPart/loc/{locale}.js",
-    "CleanWebpartWebPartStrings": "lib/webparts/cleanWebpart/loc/{locale}.js"
+    "CleanWebpartWebPartStrings": "lib/webparts/cleanWebpart/loc/{locale}.js",
+    "WebPartCleanHtmlBasicoWebPartStrings": "lib/webparts/webPartCleanHtmlBasico/loc/{locale}.js",
+    "Article1WebPartStrings": "lib/webparts/article1/loc/{locale}.js"
   }
 }
