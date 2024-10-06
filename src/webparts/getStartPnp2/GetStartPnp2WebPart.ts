@@ -8,22 +8,29 @@ import {
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'Article1WebPartStrings';
-import Article1 from './components/Article1';
-import { IArticle1Props } from './components/IArticle1Props';
+import * as strings from 'GetStartPnp2WebPartStrings';
+import GetStartPnp2 from './components/GetStartPnp2';
+import { IGetStartPnp2Props } from './components/IGetStartPnp2Props';
+import { getRandomString } from "@pnp/core";
 
-export interface IArticle1WebPartProps {
+export interface IGetStartPnp2WebPartProps {
   description: string;
 }
 
-export default class Article1WebPart extends BaseClientSideWebPart<IArticle1WebPartProps> {
+export default class GetStartPnp2WebPart extends BaseClientSideWebPart<IGetStartPnp2WebPartProps> {
 
+  private _isDarkTheme: boolean = false;
+  private _environmentMessage: string = '';
 
   public render(): void {
-    const element: React.ReactElement<IArticle1Props> = React.createElement(
-      Article1,
+    const element: React.ReactElement<IGetStartPnp2Props> = React.createElement(
+      GetStartPnp2,
       {
-                userDisplayName: this.context.pageContext.user.displayName
+        description: this.properties.description,
+        isDarkTheme: this._isDarkTheme,
+        environmentMessage: this._environmentMessage,
+        hasTeamsContext: !!this.context.sdks.microsoftTeams,
+        userDisplayName: this.context.pageContext.user.displayName
       }
     );
 
@@ -32,7 +39,8 @@ export default class Article1WebPart extends BaseClientSideWebPart<IArticle1WebP
 
   protected onInit(): Promise<void> {
     return this._getEnvironmentMessage().then(message => {
-     
+      this._environmentMessage = message;
+      console.log(getRandomString(20));
     });
   }
 
@@ -70,7 +78,7 @@ export default class Article1WebPart extends BaseClientSideWebPart<IArticle1WebP
       return;
     }
 
-   
+    this._isDarkTheme = !!currentTheme.isInverted;
     const {
       semanticColors
     } = currentTheme;

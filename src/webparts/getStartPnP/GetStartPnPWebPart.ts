@@ -8,22 +8,28 @@ import {
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'Article1WebPartStrings';
-import Article1 from './components/Article1';
-import { IArticle1Props } from './components/IArticle1Props';
+import * as strings from 'GetStartPnPWebPartStrings';
+import GetStartPnP from './components/GetStartPnP';
+import { IGetStartPnPProps } from './components/IGetStartPnPProps';
 
-export interface IArticle1WebPartProps {
+export interface IGetStartPnPWebPartProps {
   description: string;
 }
 
-export default class Article1WebPart extends BaseClientSideWebPart<IArticle1WebPartProps> {
+export default class GetStartPnPWebPart extends BaseClientSideWebPart<IGetStartPnPWebPartProps> {
 
+  private _isDarkTheme: boolean = false;
+  private _environmentMessage: string = '';
 
   public render(): void {
-    const element: React.ReactElement<IArticle1Props> = React.createElement(
-      Article1,
+    const element: React.ReactElement<IGetStartPnPProps> = React.createElement(
+      GetStartPnP,
       {
-                userDisplayName: this.context.pageContext.user.displayName
+        description: this.properties.description,
+        isDarkTheme: this._isDarkTheme,
+        environmentMessage: this._environmentMessage,
+        hasTeamsContext: !!this.context.sdks.microsoftTeams,
+        userDisplayName: this.context.pageContext.user.displayName
       }
     );
 
@@ -32,7 +38,7 @@ export default class Article1WebPart extends BaseClientSideWebPart<IArticle1WebP
 
   protected onInit(): Promise<void> {
     return this._getEnvironmentMessage().then(message => {
-     
+      this._environmentMessage = message;
     });
   }
 
@@ -70,7 +76,7 @@ export default class Article1WebPart extends BaseClientSideWebPart<IArticle1WebP
       return;
     }
 
-   
+    this._isDarkTheme = !!currentTheme.isInverted;
     const {
       semanticColors
     } = currentTheme;

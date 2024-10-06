@@ -33,6 +33,38 @@
           "manifest": "./src/webparts/article1/Article1WebPart.manifest.json"
         }
       ]
+    },
+    "article-2-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/article2/Article2WebPart.js",
+          "manifest": "./src/webparts/article2/Article2WebPart.manifest.json"
+        }
+      ]
+    },
+    "get-start-pn-p-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/getStartPnP/GetStartPnPWebPart.js",
+          "manifest": "./src/webparts/getStartPnP/GetStartPnPWebPart.manifest.json"
+        }
+      ]
+    },
+    "get-start-pnp-2-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/getStartPnp2/GetStartPnp2WebPart.js",
+          "manifest": "./src/webparts/getStartPnp2/GetStartPnp2WebPart.manifest.json"
+        }
+      ]
+    },
+    "pnp-get-start-lists-1-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnpGetStartLists1/PnpGetStartLists1WebPart.js",
+          "manifest": "./src/webparts/pnpGetStartLists1/PnpGetStartLists1WebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -40,6 +72,10 @@
     "MyFirstSpFxWebPartWebPartStrings": "lib/webparts/myFirstSpFxWebPart/loc/{locale}.js",
     "CleanWebpartWebPartStrings": "lib/webparts/cleanWebpart/loc/{locale}.js",
     "WebPartCleanHtmlBasicoWebPartStrings": "lib/webparts/webPartCleanHtmlBasico/loc/{locale}.js",
-    "Article1WebPartStrings": "lib/webparts/article1/loc/{locale}.js"
+    "Article1WebPartStrings": "lib/webparts/article1/loc/{locale}.js",
+    "Article2WebPartStrings": "lib/webparts/article2/loc/{locale}.js",
+    "GetStartPnPWebPartStrings": "lib/webparts/getStartPnP/loc/{locale}.js",
+    "GetStartPnp2WebPartStrings": "lib/webparts/getStartPnp2/loc/{locale}.js",
+    "PnpGetStartLists1WebPartStrings": "lib/webparts/pnpGetStartLists1/loc/{locale}.js"
   }
 }

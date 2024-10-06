@@ -8,31 +8,58 @@ import {
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'Article1WebPartStrings';
-import Article1 from './components/Article1';
-import { IArticle1Props } from './components/IArticle1Props';
+import * as strings from 'PnpGetStartLists1WebPartStrings';
+import PnpGetStartLists1 from './components/PnpGetStartLists1';
+import { IPnpGetStartLists1Props } from './components/IPnpGetStartLists1Props';
 
-export interface IArticle1WebPartProps {
+import { spfi, SPFx } from "@pnp/sp";
+import "@pnp/sp/webs";
+import "@pnp/sp/lists";
+
+
+
+export interface IPnpGetStartLists1WebPartProps {
   description: string;
 }
 
-export default class Article1WebPart extends BaseClientSideWebPart<IArticle1WebPartProps> {
+export default class PnpGetStartLists1WebPart extends BaseClientSideWebPart<IPnpGetStartLists1WebPartProps> {
 
+  private _isDarkTheme: boolean = false;
+  private _environmentMessage: string = '';
 
   public render(): void {
-    const element: React.ReactElement<IArticle1Props> = React.createElement(
-      Article1,
+    const element: React.ReactElement<IPnpGetStartLists1Props> = React.createElement(
+      PnpGetStartLists1,
       {
-                userDisplayName: this.context.pageContext.user.displayName
+        description: this.properties.description,
+        isDarkTheme: this._isDarkTheme,
+        environmentMessage: this._environmentMessage,
+        hasTeamsContext: !!this.context.sdks.microsoftTeams,
+        userDisplayName: this.context.pageContext.user.displayName
       }
     );
 
     ReactDom.render(element, this.domElement);
   }
 
-  protected onInit(): Promise<void> {
+protected  async getListItems() {
+  const sp = spfi().using(SPFx(this.context)); 
+
+  const list = sp.web.lists.getByTitle("paises");
+    
+    // Use 'await' to fetch the data asynchronously
+    const r = await list.select("Title")();
+    console.log(r);
+}
+
+
+  protected async onInit(): Promise<void> {
     return this._getEnvironmentMessage().then(message => {
-     
+      this._environmentMessage = message;
+      
+this.getListItems();
+
+
     });
   }
 
@@ -70,7 +97,7 @@ export default class Article1WebPart extends BaseClientSideWebPart<IArticle1WebP
       return;
     }
 
-   
+    this._isDarkTheme = !!currentTheme.isInverted;
     const {
       semanticColors
     } = currentTheme;
