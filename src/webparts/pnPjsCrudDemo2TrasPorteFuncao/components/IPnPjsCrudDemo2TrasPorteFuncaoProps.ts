@@ -1,5 +1,5 @@
 export interface IPnPjsCrudDemo2TrasPorteFuncaoProps {
-    addItem:any,
+  addItem:any,
   deleteItem:any,
   getItems:any,
   updateItem:any,
