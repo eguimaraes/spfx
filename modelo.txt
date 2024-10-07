@@ -1,0 +1,94 @@
+import { spfi, SPFx } from "@pnp/sp";
+import "@pnp/sp/webs";
+import "@pnp/sp/lists";
+import "@pnp/sp/items";
+
+
+ public sp:any;
+
+private async addItem(sp:any) {
+  try {
+    const list = sp.web.lists.getByTitle("MyList");
+    const result = await list.items.add({
+      Title: "New Item",
+      Description: "This is a new item"
+    });
+    console.log(result); // Use the returned result directly
+  } catch (error) {
+    console.error("Error adding item:", error);
+  }
+}
+
+
+// Get all items
+private async getItems(sp:any) {
+  const items = await sp.web.lists.getByTitle("MyList").items.select("Title", "Description")();
+  console.log(items);
+}
+
+// Update an item
+private async updateItem(sp:any,itemId: number) {
+  const item = await sp.web.lists.getByTitle("MyList").items.getById(itemId).update({
+    Title: "Updated Title"
+  });
+  console.log(item);
+}
+
+// Delete an item
+private async deleteItem(sp:any,itemId: number) {
+  await sp.web.lists.getByTitle("MyList").items.getById(itemId).delete();
+  console.log(`Item with ID ${itemId} deleted`);
+}
+  
+  public onInit(): Promise<void> {
+    return super.onInit().then(_ => {
+      // Configure PnPjs to use the current SPFx context
+      this.sp = spfi().using(SPFx(this.context));
+    });
+  }
+
+******props
+
+export interface IPnPGetStartList2Props {
+  description: string;
+  isDarkTheme: boolean;
+  environmentMessage: string;
+  hasTeamsContext: boolean;
+  userDisplayName: string;
+  addItem:any,
+  deleteItem:any,
+  getItems:any,
+  updateItem:any,
+  sp:any
+
+
+}
+
+
+*******tsx
+
+public render(): React.ReactElement<IPnPGetStartList2Props> {
+    const {
+      description,
+      isDarkTheme,
+      environmentMessage,
+      hasTeamsContext,
+      userDisplayName,
+      addItem,
+      deleteItem,
+      getItems,
+      updateItem,
+      sp
+      
+    } = this.props;
+
+    return (
+      <section className={`${styles.pnPGetStartList2} ${hasTeamsContext ? styles.teams : ''}`}>
+        
+        <div>
+        <button onClick={() => addItem(sp)}>Add Item</button>
+        <button onClick={() => getItems(sp)}>Get Items</button>
+        <button onClick={() => updateItem(sp,1)}>Update Item</button>
+        <button onClick={() => deleteItem(sp,1)}>Delete Item</button>
+      </div>
+        
