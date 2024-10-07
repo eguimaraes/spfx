@@ -73,6 +73,14 @@
           "manifest": "./src/webparts/pnPGetStartList2/PnPGetStartList2WebPart.manifest.json"
         }
       ]
+    },
+    "pn-pjs-crud-demo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnPjsCrudDemo/PnPjsCrudDemoWebPart.js",
+          "manifest": "./src/webparts/pnPjsCrudDemo/PnPjsCrudDemoWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -86,6 +94,7 @@
     "GetStartPnp2WebPartStrings": "lib/webparts/getStartPnp2/loc/{locale}.js",
     "PnpGetStartLists1WebPartStrings": "lib/webparts/pnpGetStartLists1/loc/{locale}.js",
     "PnPGetStartList2WebPartStrings": "lib/webparts/pnPGetStartList2/loc/{locale}.js",
-    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "PnPjsCrudDemoWebPartStrings": "lib/webparts/pnPjsCrudDemo/loc/{locale}.js"
   }
 }
