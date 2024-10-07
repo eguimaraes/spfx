@@ -85,6 +85,7 @@
     "GetStartPnPWebPartStrings": "lib/webparts/getStartPnP/loc/{locale}.js",
     "GetStartPnp2WebPartStrings": "lib/webparts/getStartPnp2/loc/{locale}.js",
     "PnpGetStartLists1WebPartStrings": "lib/webparts/pnpGetStartLists1/loc/{locale}.js",
-    "PnPGetStartList2WebPartStrings": "lib/webparts/pnPGetStartList2/loc/{locale}.js"
+    "PnPGetStartList2WebPartStrings": "lib/webparts/pnPGetStartList2/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
   }
 }

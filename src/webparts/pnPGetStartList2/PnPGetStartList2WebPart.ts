@@ -27,7 +27,7 @@ export default class PnPGetStartList2WebPart extends BaseClientSideWebPart<IPnPG
  
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';  	
-  public sp = spfi().using(SPFx(this.context));
+  public sp:any;
 
 
   
