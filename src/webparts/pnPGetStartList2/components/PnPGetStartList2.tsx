@@ -12,13 +12,22 @@ export default class PnPGetStartList2 extends React.Component<IPnPGetStartList2P
       environmentMessage,
       hasTeamsContext,
       userDisplayName,
+      addItem,
+      deleteItem,
+      getItems,
+      updateItem
       
     } = this.props;
 
     return (
       <section className={`${styles.pnPGetStartList2} ${hasTeamsContext ? styles.teams : ''}`}>
         
-   
+        <div>
+        <button onClick={() => addItem()}>Add Item</button>
+        <button onClick={() => getItems()}>Get Items</button>
+        <button onClick={() => updateItem(1)}>Update Item</button>
+        <button onClick={() => deleteItem(1)}>Delete Item</button>
+      </div>
         
         
         

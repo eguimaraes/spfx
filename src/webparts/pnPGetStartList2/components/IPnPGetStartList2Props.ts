@@ -4,5 +4,10 @@ export interface IPnPGetStartList2Props {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  addItem:any,
+  deleteItem:any,
+  getItems:any,
+  updateItem:any
+
 
 }
