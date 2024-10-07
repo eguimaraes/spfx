@@ -7,7 +7,8 @@ export interface IPnPGetStartList2Props {
   addItem:any,
   deleteItem:any,
   getItems:any,
-  updateItem:any
+  updateItem:any,
+  sp:any
 
 
 }

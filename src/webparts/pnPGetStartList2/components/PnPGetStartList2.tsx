@@ -15,7 +15,8 @@ export default class PnPGetStartList2 extends React.Component<IPnPGetStartList2P
       addItem,
       deleteItem,
       getItems,
-      updateItem
+      updateItem,
+      sp
       
     } = this.props;
 
@@ -23,10 +24,10 @@ export default class PnPGetStartList2 extends React.Component<IPnPGetStartList2P
       <section className={`${styles.pnPGetStartList2} ${hasTeamsContext ? styles.teams : ''}`}>
         
         <div>
-        <button onClick={() => addItem()}>Add Item</button>
-        <button onClick={() => getItems()}>Get Items</button>
-        <button onClick={() => updateItem(1)}>Update Item</button>
-        <button onClick={() => deleteItem(1)}>Delete Item</button>
+        <button onClick={() => addItem(sp)}>Add Item</button>
+        <button onClick={() => getItems(sp)}>Get Items</button>
+        <button onClick={() => updateItem(sp,1)}>Update Item</button>
+        <button onClick={() => deleteItem(sp,1)}>Delete Item</button>
       </div>
         
         

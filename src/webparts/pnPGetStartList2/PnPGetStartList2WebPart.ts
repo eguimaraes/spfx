@@ -44,21 +44,22 @@ export default class PnPGetStartList2WebPart extends BaseClientSideWebPart<IPnPG
         addItem:this.addItem,
         deleteItem:this.deleteItem,
         getItems:this.getItems,
-        updateItem:this.updateItem
+        updateItem:this.updateItem,
+        sp:this.sp
      
       }
     );
-    this.addItem();
+    this.addItem(this.sp);
 
-    this.addItem();
-    this.addItem();
-    this.addItem();
+    this.addItem(this.sp);
+    this.addItem(this.sp);
+    this.addItem(this.sp);
 
-    this.deleteItem(1);
+    this.deleteItem(this.sp,1);
 
-    this.getItems();
+    this.getItems(this.sp);
 
-    this.updateItem(3);
+    this.updateItem(this.sp,3);
 
 
 
@@ -74,9 +75,9 @@ export default class PnPGetStartList2WebPart extends BaseClientSideWebPart<IPnPG
 */
 // Add a new item
 
-private async addItem() {
+private async addItem(sp:any) {
   try {
-    const list = this.sp.web.lists.getByTitle("MyList");
+    const list = sp.web.lists.getByTitle("MyList");
     const result = await list.items.add({
       Title: "New Item",
       Description: "This is a new item"
@@ -89,22 +90,22 @@ private async addItem() {
 
 
 // Get all items
-private async getItems() {
-  const items = await this.sp.web.lists.getByTitle("MyList").items.select("Title", "Description")();
+private async getItems(sp:any) {
+  const items = await sp.web.lists.getByTitle("MyList").items.select("Title", "Description")();
   console.log(items);
 }
 
 // Update an item
-private async updateItem(itemId: number) {
-  const item = await this.sp.web.lists.getByTitle("MyList").items.getById(itemId).update({
+private async updateItem(sp:any,itemId: number) {
+  const item = await sp.web.lists.getByTitle("MyList").items.getById(itemId).update({
     Title: "Updated Title"
   });
   console.log(item);
 }
 
 // Delete an item
-private async deleteItem(itemId: number) {
-  await this.sp.web.lists.getByTitle("MyList").items.getById(itemId).delete();
+private async deleteItem(sp:any,itemId: number) {
+  await sp.web.lists.getByTitle("MyList").items.getById(itemId).delete();
   console.log(`Item with ID ${itemId} deleted`);
 }
   
