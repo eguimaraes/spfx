@@ -65,6 +65,14 @@
           "manifest": "./src/webparts/pnpGetStartLists1/PnpGetStartLists1WebPart.manifest.json"
         }
       ]
+    },
+    "pn-p-get-start-list-2-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnPGetStartList2/PnPGetStartList2WebPart.js",
+          "manifest": "./src/webparts/pnPGetStartList2/PnPGetStartList2WebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -76,6 +84,7 @@
     "Article2WebPartStrings": "lib/webparts/article2/loc/{locale}.js",
     "GetStartPnPWebPartStrings": "lib/webparts/getStartPnP/loc/{locale}.js",
     "GetStartPnp2WebPartStrings": "lib/webparts/getStartPnp2/loc/{locale}.js",
-    "PnpGetStartLists1WebPartStrings": "lib/webparts/pnpGetStartLists1/loc/{locale}.js"
+    "PnpGetStartLists1WebPartStrings": "lib/webparts/pnpGetStartLists1/loc/{locale}.js",
+    "PnPGetStartList2WebPartStrings": "lib/webparts/pnPGetStartList2/loc/{locale}.js"
   }
 }
