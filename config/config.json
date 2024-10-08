@@ -161,6 +161,14 @@
           "manifest": "./src/webparts/reacRenderList2/ReacRenderList2WebPart.manifest.json"
         }
       ]
+    },
+    "react-render-list-prarme-trizado-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/reactRenderListPrarmeTrizado/ReactRenderListPrarmeTrizadoWebPart.js",
+          "manifest": "./src/webparts/reactRenderListPrarmeTrizado/ReactRenderListPrarmeTrizadoWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -185,6 +193,7 @@
     "SimpleReactWebPartWebPartStrings": "lib/webparts/simpleReactWebPart/loc/{locale}.js",
     "ReactShowItemsPart1WebPartStrings": "lib/webparts/reactShowItemsPart1/loc/{locale}.js",
     "ReactRenderList1WebPartStrings": "lib/webparts/reactRenderList1/loc/{locale}.js",
-    "ReacRenderList2WebPartStrings": "lib/webparts/reacRenderList2/loc/{locale}.js"
+    "ReacRenderList2WebPartStrings": "lib/webparts/reacRenderList2/loc/{locale}.js",
+    "ReactRenderListPrarmeTrizadoWebPartStrings": "lib/webparts/reactRenderListPrarmeTrizado/loc/{locale}.js"
   }
 }
