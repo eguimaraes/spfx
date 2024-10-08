@@ -24,7 +24,9 @@ export default class ReacRenderList2WebPart extends BaseClientSideWebPart<IReacR
     const element: React.ReactElement<IReacRenderList2Props> = React.createElement(
       ReacRenderList2,
       {
-        
+        items:[{Id:1,Title:"Teste1"},
+               {Id:2,Title:"Teste2"},
+               {Id:3,Title:"Teste3"}]
       }
     );
 
