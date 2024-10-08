@@ -121,6 +121,22 @@
           "manifest": "./src/webparts/mostraListaReactBasico/MostraListaReactBasicoWebPart.manifest.json"
         }
       ]
+    },
+    "entendimentoreact-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/entendimentoreact/EntendimentoreactWebPart.js",
+          "manifest": "./src/webparts/entendimentoreact/EntendimentoreactWebPart.manifest.json"
+        }
+      ]
+    },
+    "simple-react-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/simpleReactWebPart/SimpleReactWebPartWebPart.js",
+          "manifest": "./src/webparts/simpleReactWebPart/SimpleReactWebPartWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -140,6 +156,8 @@
     "WebPartShowListWebPartStrings": "lib/webparts/webPartShowList/loc/{locale}.js",
     "ShowListItemHtmlWebPartStrings": "lib/webparts/showListItemHtml/loc/{locale}.js",
     "MostraItemsListaWebPartStrings": "lib/webparts/mostraItemsLista/loc/{locale}.js",
-    "MostraListaReactBasicoWebPartStrings": "lib/webparts/mostraListaReactBasico/loc/{locale}.js"
+    "MostraListaReactBasicoWebPartStrings": "lib/webparts/mostraListaReactBasico/loc/{locale}.js",
+    "EntendimentoreactWebPartStrings": "lib/webparts/entendimentoreact/loc/{locale}.js",
+    "SimpleReactWebPartWebPartStrings": "lib/webparts/simpleReactWebPart/loc/{locale}.js"
   }
 }
