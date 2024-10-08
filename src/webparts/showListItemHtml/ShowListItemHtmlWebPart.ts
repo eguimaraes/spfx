@@ -26,14 +26,14 @@ export interface IShowListItemHtmlWebPartProps {
 
 export default class ShowListItemHtmlWebPart extends BaseClientSideWebPart<IShowListItemHtmlWebPartProps> {
 
-public items:any;
+public items:any[];
 public sp:any;
 
   public render(): void {
     const element: React.ReactElement<IShowListItemHtmlProps> = React.createElement(
       (ShowListItemHtml),
       {
-        items: this.items,
+        items:this.items,       
         getItems:this.getItems,
         sp:this.sp
       }
@@ -46,17 +46,24 @@ public sp:any;
     return super.onInit().then(_ => {
       // Configure PnPjs to use the current SPFx context
       this.sp = spfi().using(SPFx(this.context));
-      this.getItems(this.sp);
+      this.getItems(spfi().using(SPFx(this.context)));
+      
     });
   }
 
 
 // Get all items
-private async getItems(sp:any) {
+public async getItems(sp:any) {
 
-  this.items=await sp.web.lists.getByTitle("MyList").items.select("Title", "Description")();
-    
+this.items=await sp.web.lists.getByTitle("MyList").items.select("Title", "Description")();
+
+//this.items.map(item =>(console.log(item.Title,item.Id)))
+ 
+ 
+
+
 }
+
 
 
 

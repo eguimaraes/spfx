@@ -1,5 +1,5 @@
 export interface IShowListItemHtmlProps {
-items:any,
+items:any[],
 getItems:any,
 sp:any
 }
