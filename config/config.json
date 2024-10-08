@@ -105,6 +105,14 @@
           "manifest": "./src/webparts/showListItemHtml/ShowListItemHtmlWebPart.manifest.json"
         }
       ]
+    },
+    "mostra-items-lista-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mostraItemsLista/MostraItemsListaWebPart.js",
+          "manifest": "./src/webparts/mostraItemsLista/MostraItemsListaWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -122,6 +130,7 @@
     "PnPjsCrudDemoWebPartStrings": "lib/webparts/pnPjsCrudDemo/loc/{locale}.js",
     "PnPjsCrudDemo2TrasPorteFuncaoWebPartStrings": "lib/webparts/pnPjsCrudDemo2TrasPorteFuncao/loc/{locale}.js",
     "WebPartShowListWebPartStrings": "lib/webparts/webPartShowList/loc/{locale}.js",
-    "ShowListItemHtmlWebPartStrings": "lib/webparts/showListItemHtml/loc/{locale}.js"
+    "ShowListItemHtmlWebPartStrings": "lib/webparts/showListItemHtml/loc/{locale}.js",
+    "MostraItemsListaWebPartStrings": "lib/webparts/mostraItemsLista/loc/{locale}.js"
   }
 }
