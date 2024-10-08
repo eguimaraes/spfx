@@ -1,3 +1,5 @@
 export interface IReacRenderList2Props {
-items:any[]
+items:any[],
+getItems:any,
+sp:any
 }
