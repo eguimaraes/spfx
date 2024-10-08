@@ -89,6 +89,14 @@
           "manifest": "./src/webparts/pnPjsCrudDemo2TrasPorteFuncao/PnPjsCrudDemo2TrasPorteFuncaoWebPart.manifest.json"
         }
       ]
+    },
+    "web-part-show-list-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/webPartShowList/WebPartShowListWebPart.js",
+          "manifest": "./src/webparts/webPartShowList/WebPartShowListWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -104,6 +112,7 @@
     "PnPGetStartList2WebPartStrings": "lib/webparts/pnPGetStartList2/loc/{locale}.js",
     "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
     "PnPjsCrudDemoWebPartStrings": "lib/webparts/pnPjsCrudDemo/loc/{locale}.js",
-    "PnPjsCrudDemo2TrasPorteFuncaoWebPartStrings": "lib/webparts/pnPjsCrudDemo2TrasPorteFuncao/loc/{locale}.js"
+    "PnPjsCrudDemo2TrasPorteFuncaoWebPartStrings": "lib/webparts/pnPjsCrudDemo2TrasPorteFuncao/loc/{locale}.js",
+    "WebPartShowListWebPartStrings": "lib/webparts/webPartShowList/loc/{locale}.js"
   }
 }
