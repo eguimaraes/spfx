@@ -1,4 +1,3 @@
-/*
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
@@ -8,32 +7,47 @@ import {
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
-import * as strings from 'EntendimentoreactWebPartStrings';
-import Entendimentoreact from './components/Entendimentoreact';
 
+import * as strings from 'ReactShowItemsPart1WebPartStrings';
+import ReactShowItemsPart1 from './components/ReactShowItemsPart1';
+import { IReactShowItemsPart1Props } from './components/IReactShowItemsPart1Props';
 
-export interface IEntendimentoreactWebPartProps {
+export interface IReactShowItemsPart1WebPartProps {
   description: string;
 }
 
-export interface IEntendimentoreactProps {
+export default class ReactShowItemsPart1WebPart extends BaseClientSideWebPart<IReactShowItemsPart1WebPartProps> {
 
-}
+ 
 
-
-export default class EntendimentoreactWebPart extends BaseClientSideWebPart<IEntendimentoreactWebPartProps> {
-
-  
   public render(): void {
-    const element: React.ReactElement<IEntendimentoreactProps> = React.createElement(
-      Entendimentoreact, { }
+
+const items=[
+  {Id:1,Title:"item1"},
+  {Id:2,Title:"item2"},
+  {Id:4,Title:"item3"},
+  {Id:4,Title:"item4"}
+
+
+]
+
+    const element: React.ReactElement<IReactShowItemsPart1Props> = React.createElement(
+      ReactShowItemsPart1,
+      {
+        items
+      }
     );
 
     ReactDom.render(element, this.domElement);
   }
 
+  protected onInit(): Promise<void> {
+    return Promise.resolve();
+  }
 
- 
+
+
+  
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
   }
@@ -64,4 +78,3 @@ export default class EntendimentoreactWebPart extends BaseClientSideWebPart<IEnt
     };
   }
 }
-*/

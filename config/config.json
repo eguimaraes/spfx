@@ -137,6 +137,14 @@
           "manifest": "./src/webparts/simpleReactWebPart/SimpleReactWebPartWebPart.manifest.json"
         }
       ]
+    },
+    "react-show-items-part-1-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/reactShowItemsPart1/ReactShowItemsPart1WebPart.js",
+          "manifest": "./src/webparts/reactShowItemsPart1/ReactShowItemsPart1WebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -158,6 +166,7 @@
     "MostraItemsListaWebPartStrings": "lib/webparts/mostraItemsLista/loc/{locale}.js",
     "MostraListaReactBasicoWebPartStrings": "lib/webparts/mostraListaReactBasico/loc/{locale}.js",
     "EntendimentoreactWebPartStrings": "lib/webparts/entendimentoreact/loc/{locale}.js",
-    "SimpleReactWebPartWebPartStrings": "lib/webparts/simpleReactWebPart/loc/{locale}.js"
+    "SimpleReactWebPartWebPartStrings": "lib/webparts/simpleReactWebPart/loc/{locale}.js",
+    "ReactShowItemsPart1WebPartStrings": "lib/webparts/reactShowItemsPart1/loc/{locale}.js"
   }
 }

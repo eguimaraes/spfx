@@ -1,3 +1,4 @@
+/*
 import { Version } from '@microsoft/sp-core-library';
 import { IPropertyPaneConfiguration } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
@@ -40,3 +41,4 @@ export default class SimpleReactWebPartWebPart extends BaseClientSideWebPart<ISi
     return Version.parse('1.0');
   }
 }
+*/
