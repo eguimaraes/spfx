@@ -92,3 +92,10 @@ public render(): React.ReactElement<IPnPGetStartList2Props> {
         <button onClick={() => deleteItem(sp,1)}>Delete Item</button>
       </div>
         
+
+        getItems(sp,context).then((value:any) => {
+      console.log(value); // "Success!" será impresso após 1 segundo
+     this.itens=value;
+    }).catch((error:any) => {
+      console.error(error); // Caso a Promise seja rejeitada
+    })
