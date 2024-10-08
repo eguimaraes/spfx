@@ -1,3 +1,14 @@
+ReactRenderList1
+
+       <div>
+      <h2>List Items</h2>
+      <ul>
+        {items.map(item => (
+          <li key={item.Id}>{item.Title}</li>
+        ))}
+      </ul>
+    </div>
+    
 import { spfi, SPFx } from "@pnp/sp";
 import "@pnp/sp/webs";
 import "@pnp/sp/lists";

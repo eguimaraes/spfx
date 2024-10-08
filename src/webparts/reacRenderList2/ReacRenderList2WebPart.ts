@@ -6,63 +6,39 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-import { spfi, SPFx } from "@pnp/sp";
-import "@pnp/sp/webs";
-import "@pnp/sp/lists";
-import "@pnp/sp/items";
 
 
+import * as strings from 'ReacRenderList2WebPartStrings';
+import ReacRenderList2 from './components/ReacRenderList2';
+import { IReacRenderList2Props } from './components/IReacRenderList2Props';
 
-import * as strings from 'ReactShowItemsPart1WebPartStrings';
-import ReactShowItemsPart1 from './components/ReactShowItemsPart1';
-
-
-export interface IReactShowItemsPart1Props {
-  items:any[]
-  
+export interface IReacRenderList2WebPartProps {
+  description: string;
 }
 
+export default class ReacRenderList2WebPart extends BaseClientSideWebPart<IReacRenderList2WebPartProps> {
 
-export default class ReactShowItemsPart1WebPart extends BaseClientSideWebPart<IReactShowItemsPart1Props> {
-
-public items:any[];
-public sp:any;
-
-  private async getItems() {
-    
-    await this.sp.web.lists.getByTitle("MyList").items.select("Title", "Description")().then((items:any)=>{this.items=items;console.log(this.items) });
-    
-  }
+ 
 
   public render(): void {
-    this.getItems().then((items:any)=>{
-    
-    const element: React.ReactElement<IReactShowItemsPart1Props> = React.createElement(
-      ReactShowItemsPart1,
+    const element: React.ReactElement<IReacRenderList2Props> = React.createElement(
+      ReacRenderList2,
       {
-        items:items,
-       
+        
       }
     );
 
     ReactDom.render(element, this.domElement);
   }
-  )
-  }
 
-  public onInit(): Promise<void> {
-    return super.onInit().then(_ => {
-      // Configure PnPjs to use the current SPFx context
-      this.sp = spfi().using(SPFx(this.context));  
-      spfi().using(SPFx(this.context));
-       
-      
-    });
+  protected onInit(): Promise<void> {
+    return Promise.resolve()
   }
 
 
 
   
+
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
   }
