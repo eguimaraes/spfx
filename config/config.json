@@ -113,6 +113,14 @@
           "manifest": "./src/webparts/mostraItemsLista/MostraItemsListaWebPart.manifest.json"
         }
       ]
+    },
+    "mostra-lista-react-basico-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/mostraListaReactBasico/MostraListaReactBasicoWebPart.js",
+          "manifest": "./src/webparts/mostraListaReactBasico/MostraListaReactBasicoWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -131,6 +139,7 @@
     "PnPjsCrudDemo2TrasPorteFuncaoWebPartStrings": "lib/webparts/pnPjsCrudDemo2TrasPorteFuncao/loc/{locale}.js",
     "WebPartShowListWebPartStrings": "lib/webparts/webPartShowList/loc/{locale}.js",
     "ShowListItemHtmlWebPartStrings": "lib/webparts/showListItemHtml/loc/{locale}.js",
-    "MostraItemsListaWebPartStrings": "lib/webparts/mostraItemsLista/loc/{locale}.js"
+    "MostraItemsListaWebPartStrings": "lib/webparts/mostraItemsLista/loc/{locale}.js",
+    "MostraListaReactBasicoWebPartStrings": "lib/webparts/mostraListaReactBasico/loc/{locale}.js"
   }
 }
