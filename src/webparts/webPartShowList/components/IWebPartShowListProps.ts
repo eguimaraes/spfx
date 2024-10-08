@@ -1,7 +1,4 @@
 export interface IWebPartShowListProps {
-  description: string;
-  isDarkTheme: boolean;
-  environmentMessage: string;
-  hasTeamsContext: boolean;
-  userDisplayName: string;
+  getItems:any;
+  sp:any;
 }
