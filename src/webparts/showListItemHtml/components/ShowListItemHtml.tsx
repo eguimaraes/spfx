@@ -19,11 +19,10 @@ context
     
     } = this.props;
 
-    const [items, setItems] = React.useState<any[]>([]);
-
+    
     getItems(sp,context).then((value:any) => {
       console.log(value); // "Success!" será impresso após 1 segundo
-     setItems(value);
+  
     }).catch((error:any) => {
       console.error(error); // Caso a Promise seja rejeitada
     })
@@ -33,12 +32,7 @@ context
     return (
     
       <div>
-      <h2>List Items</h2>
-      <ul>
-        {items.map(item => (
-          <li key={item.Id}>{item.Title}</li>
-        ))}
-      </ul>
+      Exemplo ainda nao renderiza - Salva e loga mas nao tras os itens
     </div>);
       
     
