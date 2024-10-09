@@ -209,6 +209,14 @@
           "manifest": "./src/webparts/detailsList500Itens/DetailsList500ItensWebPart.manifest.json"
         }
       ]
+    },
+    "fluent-ui-checkbox-basic-example-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/fluentUiCheckboxBasicExample/FluentUiCheckboxBasicExampleWebPart.js",
+          "manifest": "./src/webparts/fluentUiCheckboxBasicExample/FluentUiCheckboxBasicExampleWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -239,6 +247,7 @@
     "TextFieldWebPartWebPartStrings": "lib/webparts/textFieldWebPart/loc/{locale}.js",
     "DropdownWebPartWebPartStrings": "lib/webparts/dropdownWebPart/loc/{locale}.js",
     "DetailsListWebPartStrings": "lib/webparts/detailsList/loc/{locale}.js",
-    "DetailsList500ItensWebPartStrings": "lib/webparts/detailsList500Itens/loc/{locale}.js"
+    "DetailsList500ItensWebPartStrings": "lib/webparts/detailsList500Itens/loc/{locale}.js",
+    "FluentUiCheckboxBasicExampleWebPartStrings": "lib/webparts/fluentUiCheckboxBasicExample/loc/{locale}.js"
   }
 }
