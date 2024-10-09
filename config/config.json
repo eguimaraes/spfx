@@ -201,6 +201,14 @@
           "manifest": "./src/webparts/detailsList/DetailsListWebPart.manifest.json"
         }
       ]
+    },
+    "details-list-500-itens-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/detailsList500Itens/DetailsList500ItensWebPart.js",
+          "manifest": "./src/webparts/detailsList500Itens/DetailsList500ItensWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -230,6 +238,7 @@
     "ButtonWebPartWebPartStrings": "lib/webparts/buttonWebPart/loc/{locale}.js",
     "TextFieldWebPartWebPartStrings": "lib/webparts/textFieldWebPart/loc/{locale}.js",
     "DropdownWebPartWebPartStrings": "lib/webparts/dropdownWebPart/loc/{locale}.js",
-    "DetailsListWebPartStrings": "lib/webparts/detailsList/loc/{locale}.js"
+    "DetailsListWebPartStrings": "lib/webparts/detailsList/loc/{locale}.js",
+    "DetailsList500ItensWebPartStrings": "lib/webparts/detailsList500Itens/loc/{locale}.js"
   }
 }

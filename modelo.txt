@@ -1,3 +1,20 @@
+import { sp } from "@pnp/sp";
+ 
+export default class MyFirstSpfxWebPart extends BaseClientSideWebPart<IMyFirstSpfxWebPartProps> {
+ 
+  public render(): void {
+    this._getListItems().then(items => {
+      let listItemsHtml = items.map(item => `<li>${item.Title}</li>`).join("");
+      this.domElement.innerHTML = `<ul>${listItemsHtml}</ul>`;
+    });
+  }
+ 
+  private async _getListItems(): Promise<any[]> {
+    const items = await sp.web.lists.getByTitle("MyCustomList").items();
+    return items;
+  }
+}
+
 ReactRenderList1
 
 // Get all items
