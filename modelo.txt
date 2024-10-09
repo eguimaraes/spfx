@@ -1,5 +1,20 @@
 ReactRenderList1
 
+// Get all items
+private async getItems(sp:any) {
+  const items = await sp.web.lists.getByTitle("MyList").items.select("Title", "Description")();
+  console.log(items);
+}
+
+  public onInit(): Promise<void> {
+    return super.onInit().then(_ => {
+      // Configure PnPjs to use the current SPFx context
+      this.sp = spfi().using(SPFx(this.context));
+    });
+  }
+
+
+
        <div>
       <h2>List Items</h2>
       <ul>
@@ -8,7 +23,7 @@ ReactRenderList1
         ))}
       </ul>
     </div>
-    
+
 import { spfi, SPFx } from "@pnp/sp";
 import "@pnp/sp/webs";
 import "@pnp/sp/lists";

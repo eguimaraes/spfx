@@ -169,6 +169,38 @@
           "manifest": "./src/webparts/reactRenderListPrarmeTrizado/ReactRenderListPrarmeTrizadoWebPart.manifest.json"
         }
       ]
+    },
+    "button-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/buttonWebPart/ButtonWebPartWebPart.js",
+          "manifest": "./src/webparts/buttonWebPart/ButtonWebPartWebPart.manifest.json"
+        }
+      ]
+    },
+    "text-field-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/textFieldWebPart/TextFieldWebPartWebPart.js",
+          "manifest": "./src/webparts/textFieldWebPart/TextFieldWebPartWebPart.manifest.json"
+        }
+      ]
+    },
+    "dropdown-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/dropdownWebPart/DropdownWebPartWebPart.js",
+          "manifest": "./src/webparts/dropdownWebPart/DropdownWebPartWebPart.manifest.json"
+        }
+      ]
+    },
+    "details-list-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/detailsList/DetailsListWebPart.js",
+          "manifest": "./src/webparts/detailsList/DetailsListWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -194,6 +226,10 @@
     "ReactShowItemsPart1WebPartStrings": "lib/webparts/reactShowItemsPart1/loc/{locale}.js",
     "ReactRenderList1WebPartStrings": "lib/webparts/reactRenderList1/loc/{locale}.js",
     "ReacRenderList2WebPartStrings": "lib/webparts/reacRenderList2/loc/{locale}.js",
-    "ReactRenderListPrarmeTrizadoWebPartStrings": "lib/webparts/reactRenderListPrarmeTrizado/loc/{locale}.js"
+    "ReactRenderListPrarmeTrizadoWebPartStrings": "lib/webparts/reactRenderListPrarmeTrizado/loc/{locale}.js",
+    "ButtonWebPartWebPartStrings": "lib/webparts/buttonWebPart/loc/{locale}.js",
+    "TextFieldWebPartWebPartStrings": "lib/webparts/textFieldWebPart/loc/{locale}.js",
+    "DropdownWebPartWebPartStrings": "lib/webparts/dropdownWebPart/loc/{locale}.js",
+    "DetailsListWebPartStrings": "lib/webparts/detailsList/loc/{locale}.js"
   }
 }
