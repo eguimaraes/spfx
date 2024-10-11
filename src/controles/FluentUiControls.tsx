@@ -1,17 +1,17 @@
 import * as React from 'react';
 import type { IFluentUiControlsProps } from './IFluentUiControlsProps';
-import {ButtonDefaultExample} from '../../../controles/ButtonDefaultExample';
-import {ButtonCompoundExample} from '../../../controles/ButtonCompoundExample';
-import {ButtonCommandBarExample} from '../../../controles/ButtonCommandBarExample';
-import {ButtonSplitExample} from '../../../controles/ButtonSplitExample';
-import {ButtonIconExample} from '../../../controles/ButtonIconExample';
-import {ButtonIconWithTooltipExample} from '../../../controles/ButtonIconWithTooltipExample';
-import {ButtonContextualMenuExample} from '../../../controles/ButtonContextualMenuExample';
-import {ButtonActionExample} from '../../../controles/ButtonActionExample';
-import {ButtonCommandExample} from '../../../controles/ButtonCommandExample';
-import {ButtonAnchorExample} from '../../../controles/ButtonAnchorExample';
-import {ButtonSplitCustomExample} from '../../../controles/ButtonSplitCustomExample';
-import {ButtonToggleExample} from '../../../controles/ButtonToggleExample';
+import {ButtonDefaultExample} from './ButtonDefaultExample';
+import {ButtonCompoundExample} from './ButtonCompoundExample';
+import {ButtonCommandBarExample} from './ButtonCommandBarExample';
+import {ButtonSplitExample} from './ButtonSplitExample';
+import {ButtonIconExample} from './ButtonIconExample';
+import {ButtonIconWithTooltipExample} from './ButtonIconWithTooltipExample';
+import {ButtonContextualMenuExample} from './ButtonContextualMenuExample';
+import {ButtonActionExample} from './ButtonActionExample';
+import {ButtonCommandExample} from './ButtonCommandExample';
+import {ButtonAnchorExample} from './ButtonAnchorExample';
+import {ButtonSplitCustomExample} from './ButtonSplitCustomExample';
+import {ButtonToggleExample} from './ButtonToggleExample';
 
 
 
@@ -29,7 +29,6 @@ export default class FluentUiControls extends React.Component<IFluentUiControlsP
     <div>
 
 <div>Controles FluentUI</div>
-<hr></hr>
 <div>Folha de Testes by Edvaldo Guimaraes</div>
 <hr></hr>
 <div>Botões</div>
