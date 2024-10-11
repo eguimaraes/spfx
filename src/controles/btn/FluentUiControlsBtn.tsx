@@ -19,7 +19,7 @@ import {ButtonToggleExample} from './ButtonToggleExample';
 
 
 
-export default class FluentUiControls extends React.Component<IFluentUiControlsProps, {}> {
+export default class FluentUiControlsBtn extends React.Component<IFluentUiControlsProps, {}> {
   public render(): React.ReactElement<IFluentUiControlsProps> {
     const {
       
@@ -29,9 +29,12 @@ export default class FluentUiControls extends React.Component<IFluentUiControlsP
     <div>
 
 <div>Controles FluentUI</div>
+<hr></hr>
 <div>Folha de Testes by Edvaldo Guimaraes</div>
 <hr></hr>
 <div>Botões</div>
+<hr></hr>
+<div>FluentUiControlsBtn - Arquivo</div>
 <hr></hr>
 <div><a href='https://developer.microsoft.com/en-us/fluentui#/controls/web/button'>Documentação: https://developer.microsoft.com/en-us/fluentui#/controls/web/button</a></div>
 <hr></hr>
