@@ -217,6 +217,14 @@
           "manifest": "./src/webparts/fluentUiCheckboxBasicExample/FluentUiCheckboxBasicExampleWebPart.manifest.json"
         }
       ]
+    },
+    "fluent-ui-controls-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/fluentUiControls/FluentUiControlsWebPart.js",
+          "manifest": "./src/webparts/fluentUiControls/FluentUiControlsWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -248,6 +256,7 @@
     "DropdownWebPartWebPartStrings": "lib/webparts/dropdownWebPart/loc/{locale}.js",
     "DetailsListWebPartStrings": "lib/webparts/detailsList/loc/{locale}.js",
     "DetailsList500ItensWebPartStrings": "lib/webparts/detailsList500Itens/loc/{locale}.js",
-    "FluentUiCheckboxBasicExampleWebPartStrings": "lib/webparts/fluentUiCheckboxBasicExample/loc/{locale}.js"
+    "FluentUiCheckboxBasicExampleWebPartStrings": "lib/webparts/fluentUiCheckboxBasicExample/loc/{locale}.js",
+    "FluentUiControlsWebPartStrings": "lib/webparts/fluentUiControls/loc/{locale}.js"
   }
 }
