@@ -49,7 +49,7 @@ export default class FluentUiControlsChoiceGroupBasicExample extends React.Compo
 
 <div><div>ChoiceGroupLabelExample</div><div><hr></hr><ChoiceGroupLabelExample></ChoiceGroupLabelExample><hr></hr></div></div>
 
-<div><div>ChoiceGroupCustomExample</div><div><hr></hr><ChoiceGroupCustomExample></ChoChoiceGroupCustomExample><hr></hr></div></div>
+<div><div>ChoiceGroupCustomExample</div><div><hr></hr><ChoiceGroupCustomExample></ChoiceGroupCustomExample><hr></hr></div></div>
 
 
 
