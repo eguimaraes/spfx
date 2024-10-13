@@ -225,6 +225,22 @@
           "manifest": "./src/webparts/fluentUiControls/FluentUiControlsWebPart.manifest.json"
         }
       ]
+    },
+    "fluent-ui-controls-btn-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/fluentUiControlsBtn/FluentUiControlsBtnWebPart.js",
+          "manifest": "./src/webparts/fluentUiControlsBtn/FluentUiControlsBtnWebPart.manifest.json"
+        }
+      ]
+    },
+    "export-default-class-fluent-ui-controlschk-extends-react-compone": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/exportDefaultClassFluentUiControlschkExtendsReactComponentIFluentUiControlsProps/ExportDefaultClassFluentUiControlschkExtendsReactComponentIFluentUiControlsPropsWebPart.js",
+          "manifest": "./src/webparts/exportDefaultClassFluentUiControlschkExtendsReactComponentIFluentUiControlsProps/ExportDefaultClassFluentUiControlschkExtendsReactComponentIFluentUiControlsPropsWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -257,6 +273,8 @@
     "DetailsListWebPartStrings": "lib/webparts/detailsList/loc/{locale}.js",
     "DetailsList500ItensWebPartStrings": "lib/webparts/detailsList500Itens/loc/{locale}.js",
     "FluentUiCheckboxBasicExampleWebPartStrings": "lib/webparts/fluentUiCheckboxBasicExample/loc/{locale}.js",
-    "FluentUiControlsWebPartStrings": "lib/webparts/fluentUiControls/loc/{locale}.js"
+    "FluentUiControlsWebPartStrings": "lib/webparts/fluentUiControls/loc/{locale}.js",
+    "FluentUiControlsBtnWebPartStrings": "lib/webparts/fluentUiControlsBtn/loc/{locale}.js",
+    "ExportDefaultClassFluentUiControlschkExtendsReactComponentIFluentUiControlsPropsWebPartStrings": "lib/webparts/exportDefaultClassFluentUiControlschkExtendsReactComponentIFluentUiControlsProps/loc/{locale}.js"
   }
 }
