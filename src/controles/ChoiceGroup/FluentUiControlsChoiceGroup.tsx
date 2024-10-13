@@ -1,6 +1,13 @@
 import * as React from 'react';
 import type { IFluentUiControlsProps } from './IFluentUiControlsProps';
 import {ChoiceGroupBasicExample} from './ChoiceGroupBasicExample';
+import {ChoiceGroupControlledExample} from './ChoiceGroupControlledExample';
+import {ChoiceGroupImageExample} from './ChoiceGroupImageExample';
+import {ChoiceGroupIconExample} from './ChoiceGroupIconExample';
+import {ChoiceGroupLabelExample} from './ChoiceGroupLabelExample';
+import {ChoiceGroupCustomExample} from './ChoiceGroupCustomExample';
+
+
 
 
 
@@ -34,15 +41,15 @@ export default class FluentUiControlsChoiceGroupBasicExample extends React.Compo
 
 <div><div>ChoiceGroupBasicExample</div><div><hr></hr><ChoiceGroupBasicExample></ChoiceGroupBasicExample><hr></hr></div></div>
 
-<div><div>ChoiceGroupBasicExample</div><div><hr></hr><ChoiceGroupBasicExample></ChoiceGroupBasicExample><hr></hr></div></div>
+<div><div>ChoiceGroupControlledExample</div><div><hr></hr><ChoiceGroupControlledExample></ChoiceGroupControlledExample><hr></hr></div></div>
 
-<div><div>ChoiceGroupBasicExample</div><div><hr></hr><ChoiceGroupBasicExample></ChoiceGroupBasicExample><hr></hr></div></div>
+<div><div>ChoiceGroupImageExample</div><div><hr></hr><ChoiceGroupImageExample></ChoiceGroupImageExample><hr></hr></div></div>
 
-<div><div>ChoiceGroupBasicExample</div><div><hr></hr><ChoiceGroupBasicExample></ChoiceGroupBasicExample><hr></hr></div></div>
+<div><div>ChoiceGroupIconExample</div><div><hr></hr><ChoiceGroupIconExample></ChoiceGroupIconExample><hr></hr></div></div>
 
-<div><div>ChoiceGroupBasicExample</div><div><hr></hr><ChoiceGroupBasicExample></ChoiceGroupBasicExample><hr></hr></div></div>
+<div><div>ChoiceGroupLabelExample</div><div><hr></hr><ChoiceGroupLabelExample></ChoiceGroupLabelExample><hr></hr></div></div>
 
-<div><div>ChoiceGroupBasicExample</div><div><hr></hr><ChoiceGroupBasicExample></ChoiceGroupBasicExample><hr></hr></div></div>
+<div><div>ChoiceGroupCustomExample</div><div><hr></hr><ChoiceGroupCustomExample></ChoChoiceGroupCustomExample><hr></hr></div></div>
 
 
 
